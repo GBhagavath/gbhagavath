@@ -1,0 +1,63 @@
+#row {
+    padding-top: 300px;
+    padding-left :80px;
+    padding-bottom: 250px;
+  }
+
+  .container {
+    font-family: "Calibri Light";
+    font-style: italic;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .buffer-top {
+    margin-top: 10px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 200;
+    color: white;
+    margin-left: 38px;
+  }
+  
+  p {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    display: inline-block;
+    margin-left: 25px;
+  }
+  
+  .btn.btn-freelance {
+    background-color: hsla(0, 0%, 100%, 0.14);
+    /*background-color: #437ce5;*/
+  }
+  
+  .btn.btn-hire {
+    background-color: #ff0000b8;
+    margin-left: 23px;
+    /*background-color: #437ce5;*/
+  }
+  
+  .btn {
+    font-size: 15px;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: 200;
+  }
+  
+  .caret-right{
+    width: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    border-left: 4px solid white;
+    border-right: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+  }
+  

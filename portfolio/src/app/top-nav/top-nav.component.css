@@ -1,0 +1,41 @@
+.navCLass {
+    margin-left: 950px;
+}
+
+.navCLass a {
+    color: white;
+}
+
+.info{
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 15px;
+    color: white;
+}
+
+.info .name {
+    font-family: "Calibri Light";
+    font-style: italic;
+    font-size: 18px;
+}
+
+.info .desg {
+    font-size: 14px;
+    margin-left: 5px;
+    font-family: "Calibri Light";
+    font-style: italic;
+}
+
+img {
+    width:60px; 
+    height: 70px; 
+    margin-left: 20px;
+}
+
+.active {
+    border-bottom: 4px solid red;
+}
+
+.navCLass .active {
+    color: white;
+}
