@@ -12,3 +12,10 @@
     overflow: hidden;
     background-color: #333;
 }
+
+.container {
+    font-family: "Calibri Light";
+    font-style: italic;
+    width: 1000px;
+    margin: 0 auto;
+  }

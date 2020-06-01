@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    overflow: hidden;
+ }
+
 .navCLass {
     margin-left: 950px;
 }
@@ -7,29 +16,62 @@
 }
 
 .info{
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: 15px;
     font-size: 15px;
     color: white;
+}
+
+.block {
+    width: 0%;
+    height: inherit;
+    background: #ffb510;
+    position: relative;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    display: flex;
 }
 
 .info .name {
     font-family: "Calibri Light";
     font-style: italic;
     font-size: 18px;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+.bloc {
+    width: 0%;
+    height: inherit;
+    background: #e91e63;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    display: flex;
 }
 
 .info .desg {
-    font-size: 14px;
-    margin-left: 5px;
+    font-size: 12px;
+    margin-left: 1px;
     font-family: "Calibri Light";
     font-style: italic;
+    color: #ffffff;
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
+    opacity: 0;
+    text-transform: uppercase;
 }
 
 img {
     width:60px; 
     height: 70px; 
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 .active {
@@ -39,3 +81,110 @@ img {
 .navCLass .active {
     color: white;
 }
+
+span {
+    width:0px;
+    height: 0px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #ffffff;
+    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    margin-left: 5px;
+    margin-top: -10px;
+    position: absolute;
+    bottom: 13px;
+    right: -12px;
+
+  }
+
+@keyframes mainBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+
+  @keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes secBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #ffffff;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 10px;
+      height: 10px;
+      background: #ffffff;
+      opacity: 1;
+      bottom: 45px;
+    }
+     65% {
+        width: 7px;
+      height: 7px;
+        bottom: 0px;
+        width: 15px
+     }
+     80% {
+        width: 10px;
+      height: 10px;
+        bottom: 20px
+     }
+    100% {
+      width: 7px;
+      height: 7px;
+      background: #ffffff;
+      border: 0px solid #222;
+      bottom: 8px;
+  
+    }
+  }
+
+  @keyframes secFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  

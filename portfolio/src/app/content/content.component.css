@@ -1,16 +1,3 @@
-#row {
-    padding-top: 300px;
-    padding-left :80px;
-    padding-bottom: 250px;
-  }
-
-  .container {
-    font-family: "Calibri Light";
-    font-style: italic;
-    width: 1000px;
-    margin: 0 auto;
-  }
-
   .buffer-top {
     margin-top: 10px;
   }
@@ -33,6 +20,12 @@
   .btn.btn-freelance {
     background-color: hsla(0, 0%, 100%, 0.14);
     /*background-color: #437ce5;*/
+  }
+
+  .row {
+    padding-top: 300px;
+    padding-left :80px;
+    padding-bottom: 250px;
   }
   
   .btn.btn-hire {
