@@ -8,17 +8,10 @@ body, html {
  }
 
 .navCLass {
-    margin-left: 950px;
+    margin-left: 1120px;
 }
 
 .navCLass a {
-    color: white;
-}
-
-.info{
-    margin-top: 10px;
-    margin-left: 15px;
-    font-size: 15px;
     color: white;
 }
 
@@ -29,42 +22,45 @@ body, html {
     position: relative;
     animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
+    text-overflow: ellipsis;
 }
 
-.info .name {
+.name {
     font-family: "Calibri Light";
     font-style: italic;
-    font-size: 18px;
+    font-size: 17px;
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: 1.6s;
+    animation-delay: 2.0s;
     opacity: 0;
-    display: flex;
-    align-items: baseline;
+    align-items: self-start;
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    color: white;
 }
 
 .bloc {
     width: 0%;
     height: inherit;
     background: #e91e63;
-    position: absolute;
+    position: relative;
     animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     animation-delay: 2s;
     display: flex;
 }
 
-.info .desg {
+.desg {
     font-size: 12px;
-    margin-left: 1px;
     font-family: "Calibri Light";
     font-style: italic;
     color: #ffffff;
     animation: secFadeIn 2s forwards;
-    animation-delay: 3.2s;
+    animation-delay: 4.0s;
     opacity: 0;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 img {
