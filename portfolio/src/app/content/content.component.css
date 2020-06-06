@@ -6,7 +6,7 @@
     font-size: 28px;
     font-weight: 200;
     color: white;
-    margin-left: 45px;
+    margin-left: 100px;
   }
   
   .animated {
@@ -20,7 +20,7 @@
     font-size: 20px;
     font-weight: 200;
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 85px;
   }
   
   .btn.btn-freelance {
@@ -36,7 +36,7 @@
   
   .btn.btn-hire {
     background-color: #ff0000b8;
-    margin-left: 23px;
+    margin-left: 80px;
     /*background-color: #437ce5;*/
   }
   
