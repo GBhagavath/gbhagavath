@@ -1,28 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    overflow: hidden;
- }
-
 .navCLass {
-    margin-left: 1120px;
+    margin-left: 950px;
 }
 
 .navCLass a {
     color: white;
-}
-
-.block {
-    width: 0%;
-    height: inherit;
-    background: #ffb510;
-    position: relative;
-    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-    display: flex;
-    text-overflow: ellipsis;
 }
 
 .name {
@@ -32,7 +13,7 @@ body, html {
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: 2.0s;
+    animation-delay: 2s;
     opacity: 0;
     align-items: self-start;
     position: relative;
@@ -79,41 +60,6 @@ img {
     color: white;
 }
 
-span {
-    width:0px;
-    height: 0px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background: #ffffff;
-    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
-    animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
-    animation-delay: 2s;
-    margin-left: 5px;
-    margin-top: -10px;
-    position: absolute;
-    bottom: 13px;
-    right: -12px;
-
-  }
-
-@keyframes mainBlock {
-    0% {
-      width: 0%;
-      left: 0;
-  
-    }
-    50% {
-      width: 100%;
-      left: 0;
-  
-    }
-    100% {
-      width: 0;
-      left: 100%;
-    }
-  }
-
   @keyframes mainFadeIn {
     0% {
       opacity: 0;
@@ -123,35 +69,155 @@ span {
     }
   }
 
-  @keyframes secBlock {
+  @keyframes secFadeIn {
     0% {
-      width: 0%;
-      left: 0;
-  
-    }
-    50% {
-      width: 100%;
-      left: 0;
-  
+      opacity: 0;
     }
     100% {
-      width: 0;
-      left: 100%;
+      opacity: 0.5;
     }
+  }
+   
+  .revealname,
+  .revealname::after {
+      animation-delay: 1s;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(.74, .06, .4, .92) forwards;
+  }
+   
+  .revealname {
+    position: relative;
+    font-size: 10vw;
+  }
+   
+  .revealname::after {
+      content: "";
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ffb510;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      pointer-events: none;
+      animation-name: revealer;
+    }
+
+  @keyframes text {
+    from {
+            clip-path: inset(0 100% 0 0);
+    }
+    to {
+            clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  @keyframes revealer {
+    
+    0%, 50% {
+            transform-origin: 0 50%;
+    }
+    
+    60%, 100% {
+            transform-origin: 100% 50%;		
+    }
+   
+    60% {
+            transform: scaleX(1);
+    }
+    
+    100% {
+            transform: scaleX(0);
+    }
+  }
+  
+  .revealdesg,
+  .revealdesg::after {
+      animation-delay: 3s;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(.74, .06, .4, .92) forwards;
+  }
+   
+  .revealdesg {
+    position: relative;
+    font-size: 10vw;
+  }
+   
+  .revealdesg::after {
+      content: "";
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #e91e63;;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      pointer-events: none;
+      animation-name: revealer;
+    }
+
+  @keyframes text {
+    from {
+            clip-path: inset(0 100% 0 0);
+    }
+    to {
+            clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  @keyframes revealer {
+    
+    0%, 50% {
+            transform-origin: 0 50%;
+    }
+    
+    60%, 100% {
+            transform-origin: 100% 50%;		
+    }
+   
+    60% {
+            transform: scaleX(1);
+    }
+    
+    100% {
+            transform: scaleX(0);
+    }
+  }
+
+  span {
+    width:0px;
+    height: 0px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    background: #ffb510;
+    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 3s;
+    margin-left: 5px;
+    margin-top: -10px;
+    position: absolute;
   }
 
   @keyframes popIn {
     0% {
       width: 0px;
       height: 0px;
-      background: #ffffff;
+      background: #e9d856;
       border: 0px solid #ddd;
       opacity: 0;
     }
     50% {
       width: 10px;
       height: 10px;
-      background: #ffffff;
+      background: #e9d856;
       opacity: 1;
       bottom: 45px;
     }
@@ -169,19 +235,8 @@ span {
     100% {
       width: 7px;
       height: 7px;
-      background: #ffffff;
+      background: #e9d856;
       border: 0px solid #222;
-      bottom: 8px;
-  
+      bottom: 7px;
     }
   }
-
-  @keyframes secFadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
-  

@@ -1,42 +1,20 @@
-  .buffer-top {
-    margin-top: 10px;
+ .btn.btn-freelance {
+    background-color: hsla(0, 0%, 100%, 0.14);
+    /*background-color: #437ce5;*/
   }
-  
-  h1 {
-    font-size: 28px;
-    font-weight: 200;
-    color: white;
-    margin-left: 100px;
-  }
-  
-  .animated {
-    animation-duration: 2.5s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-  }
+
 
   p {
     color: white;
     font-size: 20px;
     font-weight: 200;
     display: inline-block;
-    margin-left: 85px;
-  }
-  
-  .btn.btn-freelance {
-    background-color: hsla(0, 0%, 100%, 0.14);
-    /*background-color: #437ce5;*/
-  }
-
-  .row {
-    padding-top: 300px;
-    padding-left :80px;
-    padding-bottom: 250px;
+    margin-left: 350px;
   }
   
   .btn.btn-hire {
     background-color: #ff0000b8;
-    margin-left: 80px;
+    margin-left: 350px;
     /*background-color: #437ce5;*/
   }
   
@@ -60,13 +38,48 @@
     border-bottom: 4px solid transparent;
   }
 
-  @keyframes rubberBand {
-    0% {transform: scale(1);}
-    30% {transform: scaleX(1.25) scaleY(0.75);}
-    40% {transform: scaleX(0.75) scaleY(1.25);}
-    60% {transform: scaleX(1.15) scaleY(0.85);}
-    100% {transform: scale(1);}
-  }
-  .rubberBand {
-    animation-name: rubberBand;
-  }
+.first, .heading {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  color: white;
+  font-size: 25px;
+  margin-top: 250px;
+}
+
+.first {
+  animation: showup 7s 1;
+  margin-left: 350px;
+}
+
+.heading {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.heading span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:1;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:1;width:355px;}
+}
