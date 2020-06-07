@@ -6,23 +6,23 @@
 .contentrow {
     font-family: "Calibri Light";
     font-style: italic;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url(/assets/images/background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: inherit;
     margin-left: -15px;
   }
 
 .projectrow {
-    background-image: url("/assets/images/Projects-Background.jpg");
+    background: #f7f7f7;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
-    position: relative;
-    display: none;
+    position: absolute;
+    margin-left: -15px;
 }

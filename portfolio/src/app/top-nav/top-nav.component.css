@@ -2,8 +2,22 @@
     margin-left: 950px;
 }
 
+.navbar{
+  min-height:12px;
+}
+
 .navCLass a {
     color: white;
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+      background: #1C2331!important;
+  }
+}.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.7)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+
+.navbar-inner {
+  background: transparent;
 }
 
 .name {
@@ -46,10 +60,10 @@
 }
 
 img {
-    width:60px; 
-    height: 70px; 
+    width:50px; 
+    height: 60px; 
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .active {
