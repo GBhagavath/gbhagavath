@@ -48,7 +48,6 @@
 }
 
 .first {
-  animation: showup 7s 1;
   margin-left: 350px;
 }
 
@@ -60,13 +59,6 @@
 .heading span {
   margin-left:-355px;
   animation: slidein 7s infinite;
-}
-
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:1;}
 }
 
 @keyframes slidein {
