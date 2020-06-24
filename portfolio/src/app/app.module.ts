@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { ContentComponent } from './content/content.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SafePipe } from './projects/safepipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
     ContentComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

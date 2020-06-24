@@ -1,72 +1,5 @@
-  .flip-card {
-    background-color: transparent;
-    width: 400px;
-    height: 400px;
-    perspective: 1000px;
-    display: inline;
-    float: left;
-    margin-top: 30px;
-    margin-left: 20px;
-    position: relative;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  .flip-card-back {
-    background-color: rgb(187, 185, 179);
-    transform: rotateY(180deg);
-  }
-
-  h1 {
-    margin-top: 50px;    
-  }
-
-  .flip-card-back h1 {
-      margin-bottom: 30px;
-      color: black;
-  }
-
-  .flip-card-back p {
-    margin-bottom: 30px;
-    color: black;
-}
-
-  img {
-    width:400px;height:400px;
-  }
-
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  span{
+/*Project Animation*/
+span{
     margin: 0 15px;
     line-height: .7;
     font-size: 42px;
@@ -74,13 +7,14 @@
     animation: span 3s ease-in infinite alternate;
     text-align: center;
     color: black;
-  }
+}
 
   .main{
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 70px;
   }
 
   .letter{
@@ -104,3 +38,259 @@
     0%,30%{ width: 27px; }
     70%,100%{ width: 30vw; }
   }
+
+/*Container*/
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 1200px)
+.container {
+    max-width: 1140px;
+}
+@media (min-width: 992px)
+.container {
+    max-width: 960px;
+}
+@media (min-width: 768px)
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+}
+
+/*Row*/
+.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.items-center {
+  -webkit-align-items: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+
+.text-center {
+  height: 100%!important;
+  text-align: center!important;
+}
+
+@media (min-width: 992px)
+.text-lg-left {
+    text-align: left!important;
+}
+
+.col-lg-6:first-of-type {
+  min-height: 303px;
+}
+
+@media (min-width: 992px)
+.p-lg-0 {
+    padding: 0!important;
+}
+@media (min-width: 992px)
+.col-lg-6 {
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-lg-6 {
+  position: relative;
+    width: 100%;
+    padding-right: 28px;
+    padding-left: 28px;
+}
+
+/*Device look*/
+.device-macbook-pro {
+  height: 444px;
+  width: 740px;
+  margin-left: -100px;
+  margin-top: 50px;
+}
+
+.device-frame {
+  background: #0d0d0d;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 2px #c8cacb;
+  height: 428px;
+  margin: 0 auto;
+  padding: 29px 19px 39px 19px;
+  position: relative;
+  width: 614px;
+}
+
+.device-frame::after {
+  background: #272626;
+  border-radius: 0 0 20px 20px;
+  bottom: 2px;
+  content: "";
+  height: 26px;
+  left: 2px;
+  position: absolute;
+  width: 610px;
+}
+
+.device-frame::before {
+  bottom: 10px;
+  color: #c8cacb;
+  content: "MacBook Pro";
+  font-size: 12px;
+  height: 16px;
+  left: 50%;
+  line-height: 16px;
+  margin-left: -100px;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  z-index: 1;
+}
+
+.device-content {
+  border: 2px solid #121212;
+  border-radius: 2px;
+  height: 360px;
+  width: 576px;
+}
+
+.device-power {
+  background: #e2e3e4;
+  border: solid #d5d6d8;
+  border-radius: 2px 2px 0 0;
+  border-width: 2px 4px 0 4px;
+  height: 14px;
+  margin-top: -10px;
+  position: relative;
+  width: 740px;
+  z-index: 9;
+}
+
+.device-power::after,
+.device-power::before {
+  content: "";
+  position: absolute;
+}
+
+.device-power::after {
+  background: #d5d6d8;
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 0 4px 2px #babdbf;
+  height: 10px;
+  left: 50%;
+  margin-left: -60px;
+  top: -2px;
+  width: 120px;
+}
+
+.device-power::before {
+  background: #a0a3a7;
+  border-radius: 0 0 180px 180px/ 0 0 12px 12px;
+  box-shadow: inset 0 -2px 6px 0 #474a4d;
+  height: 12px;
+  left: -4px;
+  margin: 0 auto;
+  top: 10px;
+  width: 740px;
+}
+
+.device-spacegray .device-frame{
+    box-shadow: inset 0 0 0 2px #767a7d;
+}
+
+.device-spacegray .device-power {
+  background: #9c9c9c;
+  border-color: #767a7d;
+}
+
+.device-spacegray .device-power::after {
+  background: #83878a;
+  box-shadow: inset 0 0 4px 2px #6a6d70;
+}
+
+.device-spacegray .device-power::before {
+  background: #515456;
+  box-shadow: inset 0 -2px 6px 0 black;
+}
+
+.col-lg-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+@media (min-width: 992px)
+.col-lg-5 {
+    -webkit-flex: 0 0 41.66667%;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+
+@media (min-width: 1200px)
+.h3, h3 {
+    font-size: 28px;
+}
+
+@media (min-width: 576px)
+.h3, h3 {
+    font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
+}
+
+.h3, h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.description {
+  font-size: 15px;
+  color: black;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+}
+
+.badge-sm {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.badge-primary {
+  color: #fff;
+  background-color: #e91e63;
+}
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+hr {
+  margin-top: 5%;
+  border: 1px solid #ddd;
+}

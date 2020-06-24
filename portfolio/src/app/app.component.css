@@ -17,12 +17,8 @@
   }
 
 .projectrow {
-    background: #f7f7f7;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     margin-left: -15px;
 }
