@@ -3,6 +3,9 @@
     /*background-color: #437ce5;*/
   }
 
+  #id {
+    position: relative;
+  }
 
   p {
     color: white;
@@ -44,7 +47,7 @@
   white-space:nowrap;
   color: white;
   font-size: 25px;
-  margin-top: 250px;
+  margin-top: 320px;
 }
 
 .first {
