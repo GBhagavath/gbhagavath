@@ -1,9 +1,17 @@
-.navCLass {
-    margin-left: 950px;
+.displaycard {
+  display: contents;
+}
+
+.items {
+ margin-left: 100px;
 }
 
 .navCLass a {
     color: white;
+}
+
+.navCLass {
+  float: right;
 }
 
 .navbar-inner {

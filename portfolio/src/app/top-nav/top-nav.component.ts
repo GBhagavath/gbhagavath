@@ -17,7 +17,7 @@ export class TopNavComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) 
   onWindowScroll(e) {
     let element = document.querySelector('.navbar');
-    if (window.pageYOffset > 700) {
+    if (window.pageYOffset > 620) {
       element.classList.add('dark');
     } else {
       element.classList.remove('dark');

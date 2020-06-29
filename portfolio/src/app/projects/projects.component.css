@@ -14,7 +14,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .letter{
@@ -293,4 +293,11 @@ span{
 hr {
   margin-top: 5%;
   border: 1px solid #ddd;
+}
+
+.proj {
+  vertical-align: bottom;
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
 }

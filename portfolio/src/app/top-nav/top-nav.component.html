@@ -1,25 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" (scroll)="onWindowScroll($event);">
-  <div id="logo">
-    <img src="assets/logo.png" alt="Ganesh">
-  </div>
-  <div class="info">
-    <div class="revealname">
-        <div class="name">Ganesh Bhagavath<span></span></div>
+  <div class="col-sm-3 displaycard">
+    <div id="logo">
+      <img src="assets/logo.png" alt="Ganesh">
     </div>
-
-    <div class="revealdesg">
-        <div class="desg">Full Stack Developer</div>
+    <div class="info">
+      <div class="revealname">
+          <div class="name">Ganesh Bhagavath<span></span></div>
+      </div>
+  
+      <div class="revealdesg">
+          <div class="desg">Full Stack Developer</div>
+      </div>
     </div>
   </div>
-  <ul class="navbar-nav navCLass">
-    <li class="nav-item">
-      <a class="nav-link" routerLink='/' routerLinkActive = "active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink='/projects' routerLinkActive = "active" fragment="projects">Projects</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink='/contacts' routerLinkActive = "active">Contact</a>
-    </li>
-  </ul>
+  <div class="col-sm-9 items">
+    <ul class="navbar-nav navCLass">
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/' routerLinkActive = "active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/projects' routerLinkActive = "active" fragment="projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/about' routerLinkActive = "active" fragment="about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/contacts' routerLinkActive = "active">Contact</a>
+      </li>
+    </ul>
+  </div>
 </nav>
