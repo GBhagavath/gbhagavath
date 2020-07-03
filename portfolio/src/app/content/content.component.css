@@ -1,53 +1,12 @@
- .btn.btn-freelance {
-    background-color: hsla(0, 0%, 100%, 0.14);
-    /*background-color: #437ce5;*/
-  }
-
-  #id {
-    position: relative;
-  }
-
-  p {
-    color: white;
-    font-size: 20px;
-    font-weight: 200;
-    display: inline-block;
-    margin-left: 350px;
-  }
-  
-  .btn.btn-hire {
-    background-color: #ff0000b8;
-    margin-left: 350px;
-    /*background-color: #437ce5;*/
-  }
-  
-  .btn {
-    font-size: 15px;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 3px;
-    margin-right: 10px;
-    display: inline-block;
-    font-weight: 200;
-  }
-  
-  .caret-right{
-    width: 10px;
-    display: inline-block;
-    margin-left: 5px;
-    border-left: 4px solid white;
-    border-right: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-  }
-
-.first, .heading {
-  display:inline-block;
-  overflow:hidden;
-  white-space:nowrap;
-  color: white;
-  font-size: 25px;
-  margin-top: 320px;
+.row {
+  font-family: "Calibri Light";
+  font-style: italic;
+  height: 100vh;
+  background-image: url(/assets/images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: inherit;
 }
 
 .first {
@@ -59,9 +18,60 @@
   animation: reveal 7s infinite;
 }
 
+.first, .heading {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  color: white;
+  font-size: 25px;
+  margin-top: 320px;
+}
+
 .heading span {
   margin-left:-355px;
   animation: slidein 7s infinite;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  display: inline-block;
+  margin-left: 350px;
+}
+
+.callToAction {
+  margin-left: 350px;
+}
+
+.btn {
+  font-size: 15px;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 3px;
+  margin-right: 10px;
+  display: inline-block;
+  font-weight: 200;
+}
+
+.btn.btn-hire {
+  background-color: #ff0000b8;
+  /*background-color: #437ce5;*/
+}
+
+.btn.btn-freelance {
+    background-color: hsla(0, 0%, 100%, 0.14);
+    /*background-color: #437ce5;*/
+}
+  
+.caret-right{
+    width: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    border-left: 4px solid white;
+    border-right: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 
 @keyframes slidein {

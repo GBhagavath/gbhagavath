@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found-component';
 import { FragmentPolyfillModule } from './fragment-polyfill.module';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     ProjectsComponent,
     SafePipe,
     PageNotFoundComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

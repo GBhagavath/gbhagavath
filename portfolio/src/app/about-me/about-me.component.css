@@ -5,10 +5,7 @@ h1 {
     padding-top: 20px;
 }
 
-.gallery {
-    width: 100vw;
-    height: 100vh;
-    margin-left: -15px;
+.row {
     margin-top: -18px;
     background-color: #181818 !important
 }
@@ -128,4 +125,8 @@ li {
     vertical-align: middle;
     border-style: none;
     height: 50px;
+}
+
+a {
+    margin-left: 25px;
 }
