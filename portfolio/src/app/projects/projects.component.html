@@ -9,11 +9,11 @@
   <span>S</span>
 </div>
 <div class="container-fluid">
-    <div class="row items-center text-center text-lg-left">
+    <div class="row items-center text-center text-lg-left" *ngFor="let project of projects">
       <div class="col-lg-7 p-lg-0">
           <div class="device device-macbook-pro device-spacegray">
               <div class="device-frame">
-                  <iframe [src]="url | safe" class="device-content"></iframe>
+                  <iframe [src]="project.url | safe" class="device-content"></iframe>
               </div>
               <div class="device-stripe"></div>
               <div class="device-header"></div>
@@ -23,55 +23,14 @@
           </div>
       </div>
       <div class="col-lg-4">
-          <h3 class="h3">Turvo <div class="badge badge-primary badge-sm">2019</div></h3>
+          <h3 class="h3">{{project.name}} <div class="badge badge-primary badge-sm">{{project.year}}</div></h3>
           <p class="description mb-4">
-            Turvo is a product that gives a real
-            time solution for the logistics platform using
-            Shipper, Broker and Carrier, with real-time
-            tracking of shipments. The product uses
-            Telematics devices to track the shipment and
-            give the real time updates on the platform. The
-            application completes the shipments based on
-            geo-fence, the invoice will be sent across the
-            consumers.
+            {{project.description}}
           </p>
           <p class="proj mb-4">
-            Tech Skills: Java, Spring Boot, MongoDB, MySQL, RabbitMQ, Kibana
+            Tech Skills: {{project.languages}}
           </p>
       </div>
     </div>
-  <hr>
-  
-  <div class="row items-center text-center text-lg-left">
-    <div class="col-lg-7 p-lg-0">
-        <div class="device device-macbook-pro device-spacegray">
-            <div class="device-frame">
-                <iframe [src]="url | safe" class="device-content"></iframe>
-            </div>
-            <div class="device-stripe"></div>
-            <div class="device-header"></div>
-            <div class="device-sensors"></div>
-            <div class="device-btns"></div>
-            <div class="device-power"></div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <h3 class="h3">Turvo <div class="badge badge-primary badge-sm">2019</div></h3>
-        <p class="description mb-4">
-          Turvo is a product that gives a real
-          time solution for the logistics platform using
-          Shipper, Broker and Carrier, with real-time
-          tracking of shipments. The product uses
-          Telematics devices to track the shipment and
-          give the real time updates on the platform. The
-          application completes the shipments based on
-          geo-fence, the invoice will be sent across the
-          consumers.
-        </p>
-        <p class="proj mb-4">
-          Tech Skills: Java, Spring Boot, MongoDB, MySQL, RabbitMQ, Kibana
-        </p>
-    </div>
-  </div>
   <hr>
 </div>

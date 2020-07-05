@@ -7,56 +7,100 @@
 
             <div class="col-lg-12">
                 <div class="col-md-6 formleft">
-                    <form id="contactForm">
+                    <form id="contactForm" (ngSubmit)="sendMessage(f)" #f="ngForm">
                         <div class="form-row formRow">
                             <div class="col-sm-12">
                                 <div class="form-group col-lg-5 fNSection">
                                     <label for="firstName">First Name *</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="Please enter first name" required>
+                                    <input type="text" 
+                                    class="form-control" 
+                                    id="firstName" 
+                                    placeholder="Please enter first name" 
+                                    name="fName"
+                                    ngModel
+                                    required
+                                    #fName="ngModel">
+                                    <span class="help-block" *ngIf="fName.invalid && fName.touched">First Name is mandatory!</span>
                                 </div>
                                 <div class="form-group col-lg-5 lNSection">
                                     <label for="lastName">Last Name *</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="Please enter last name" required>
+                                    <input type="text" 
+                                    class="form-control" 
+                                    id="lastName" 
+                                    placeholder="Please enter last name" 
+                                    name="lName"
+                                    ngModel
+                                    required
+                                    #lName="ngModel">
+                                    <span class="help-block" *ngIf="lName.invalid && lName.touched">Last Name is mandatory!</span>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group col-lg-5 emailSection">
                                     <label for=email>Email *</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Please enter email address" required>
+                                    <input type="email" 
+                                    class="form-control" 
+                                    id="email" 
+                                    placeholder="Please enter email address" 
+                                    name="email"
+                                    ngModel
+                                    required
+                                    #email="ngModel">
+                                    <span class="help-block" *ngIf="email.invalid && email.touched">Please enter a valid email!</span>
                                 </div>
                                 <div class="form-group col-lg-5 phoneSection">
                                     <label for="lastName">Phone Number *</label>
-                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Please enter phone number" pattern="[0-9]{10}" required>
+                                    <input type="tel" 
+                                    class="form-control" 
+                                    id="phoneNumber" 
+                                    placeholder="Please enter phone number" 
+                                    pattern="^[6789][0-9]{9}" 
+                                    name="phoneNumber"
+                                    ngModel
+                                    required
+                                    #phone="ngModel">
+                                    <span class="help-block" *ngIf="phone.invalid && phone.touched">Please enter a valid phone number!</span>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group col-lg-10 messageSection">
                                     <label for=email>Message *</label>
-                                    <textarea class="form-control" id="messageArea" rows="4" placeholder="Please enter the message or your product details" required></textarea>
+                                    <textarea class="form-control" 
+                                    id="messageArea" 
+                                    rows="4" 
+                                    placeholder="Please enter the message or your product details" 
+                                    name="message"
+                                    ngModel
+                                    required
+                                    #messagePurpose="ngModel"></textarea>
+                                    <span class="help-block" *ngIf="messagePurpose.invalid && messagePurpose.touched">Please enter why you are trying to contact!</span>
                                 </div>
                             </div>
                             <div class="col-sm-12 messageButton">
-                                <button type="submit" class="buttonMsg">Send</button>
+                                <button type="submit" class="buttonMsg" [disabled]="!f.valid">Send</button>
+                                <button type="button" class="btn btn-link" [disabled]="!f.touched" (click)="onClear(f)" style="margin-left: 10px;">Cancel</button>
                             </div>
                         </div>
                     </form>
+                    <div class="notify" id="notifySuccess"></div>
+                    <div class="thankyou" id="thankyou">Thank you for contacting!</div>
                 </div>
                 <div class="vl"></div>
                 <div class="col-md-6 phone">
                     <div class="device device-google-pixel-2-xl">
                         <div class="device-frame">
                             <img class="device-content" src="/assets/images/Ganesh.jpg">
-                            <div class="currenttime">{{now}}</div>
+                        </div>
+                        <div class="topcontent">
+                            <div class="currenttime">{{now | date: 'hh:mm'}}</div>
                             <i class="fa fa-wifi" aria-hidden="true" id=wifi></i>
                             <i class="fa fa-signal" aria-hidden="true" id="signal"></i>
                             <i class="fa fa-battery-full" aria-hidden="true" id="battery"></i>
                             <div class="hundred">100%</div>
-                            <a href="https://in.linkedin.com/in/ganesh-bhagavath-b5208358" target="_blank">
-                                <div class="google-search-bar">
-                                    <img class="google" src="/assets/images/Google.png">
-                                    <img class="googleassistant" src="/assets/images/GoogleAssistant.png">
-                                </div>
-                            </a>
+                        </div>
+                        <div class="google-search-bar">
+                            <img class="google" src="/assets/images/Google.png">
+                            <img class="googleassistant" src="/assets/images/GoogleAssistant.png">
                         </div>
                         <div class="device-stripe"></div>
                         <div class="device-header"></div>
@@ -73,7 +117,7 @@
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ganeshbhagavath58@email.com" target="_blank">
                                 <img class="gmail" src="/assets/images/gmail.png">
                             </a>
-                            <a>
+                            <a href="https://www.facebook.com/ganeshbhagavath.58" target="_blank">
                                 <img class="facebook" src="/assets/images/facebook.png">
                             </a>
                         </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,29 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  now:string;
+  now:Date;
+  url = "https://in.linkedin.com/in/ganesh-bhagavath-b5208358";
   constructor() { 
     setInterval(() => {
-      var time = new Date();
-      var hours = time.getHours();
-      var minutes = time.getMinutes();
-      var min = '';
-      if (hours > 12) {
-        hours -= 12;
-      } else if (hours === 0) {
-        hours = 12;
-      }
-
-      if (minutes < 10) {
-        min= '0' + minutes;
-      } else {
-        min = minutes.toString()
-      }
-
-      this.now = hours + ':' + min}, 1);
+      this.now = new Date()}, 1);
   }
 
   ngOnInit(): void {
   }
 
+  sendMessage(form: NgForm) {
+    console.log(form);
+    const value = form.value;
+    console.log(value.fName);
+    console.log(value.lName);
+    console.log(value.email);
+    console.log(value.phoneNumber);
+    console.log(value.message);
+    var notify = document.getElementById("notifySuccess");
+    notify.style.display = "block";
+    var thankyou = document.getElementById("thankyou");
+    thankyou.style.display = "block";
+    form.reset();
+    setTimeout( () => { 
+      thankyou.style.animation = "mainFadeOut 6s forwards";
+     }, 3000 );
+     
+  }
+
+  onClear(form: NgForm) {
+    form.reset();
+  }
 }

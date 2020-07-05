@@ -36,6 +36,14 @@
     margin-left: 50px;
 }
 
+input.ng-invalid.ng-touched {
+    border: 1px solid #e91e63;
+}
+
+textarea.ng-invalid.ng-touched {
+    border: 1px solid #e91e63;
+}
+
 .dottedVLine {
     height: 30px;
     border-left: 1px dotted black;
@@ -189,9 +197,13 @@
     height: 30px;
     position: absolute;
     top: 100px;
-    margin-left: 10px;
+    margin-left: 25px;
     background: #272727;
     border-radius: 40px;
+}
+
+.buttonMsg:disabled {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .google {
@@ -212,6 +224,10 @@
     border-radius: 5px;
 }
 
+.topcontent {
+    margin-left: 12px;
+}
+
 .currenttime {
     top: 68px;
     position: absolute;
@@ -227,7 +243,7 @@
 #wifi {
     top: 70px;
     position: absolute;
-    margin-left: -75px;
+    margin-left: 175px;
     border-radius: 5px;
     color: white;
     font-size: 10px;
@@ -236,7 +252,7 @@
 #signal {
     top: 70px;
     position: absolute;
-    margin-left: -58px;
+    margin-left: 190px;
     border-radius: 5px;
     color: white;
     font-size: 12px;
@@ -245,7 +261,7 @@
 #battery {
     top: 72px;
     position: absolute;
-    margin-left: -42px;
+    margin-left: 205px;
     color: white;
     transform: rotate(270deg);
     font-size: 8px;
@@ -261,4 +277,90 @@
     color: white;
     font-family: sans-serif;
     font-size: 10px;
+}
+
+.help-block {
+    color: #e91e63;
+    font-size: 15px;
+}
+
+.notify,
+.notify::after {
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.74, .06, .4, .92) forwards;
+}
+
+.notify {
+    width: 220px;
+    height: 30px;
+    margin-top: 30px;
+    position: relative;
+    margin-left: 65px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.notify,
+.notify::after {
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: revealer;
+    display: none;
+}
+
+.thankyou {
+    color: green;
+    font-family: "Calibri Light";
+    font-style: italic;
+    font-size: 17px;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    align-items: self-start;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    margin-top: -28px;
+    position: relative;
+    margin-left: 65px;
+    display: none;
+}
+
+@keyframes revealer {
+    
+    0%, 50% {
+            transform-origin: 0 50%;
+    }
+    
+    60%, 100% {
+            transform-origin: 100% 50%;		
+    }
+   
+    60% {
+            transform: scaleX(1);
+    }
+    
+    100% {
+            transform: scaleX(0);
+    }
+  }
+
+  @keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mainFadeOut {
+    0% {
+        opacity:1;
+      }
+      100% {
+        opacity:0;
+      }
 }
