@@ -9,8 +9,8 @@
                 <div class="col-md-6 formleft">
                     <form id="contactForm" (ngSubmit)="sendMessage(f)" #f="ngForm">
                         <div class="form-row formRow">
-                            <div class="col-sm-12">
-                                <div class="form-group col-lg-5 fNSection">
+                            <div class="col-sm-12 nameSection">
+                                <div class="form-group col-sm-5 fNSection">
                                     <label for="firstName">First Name *</label>
                                     <input type="text" 
                                     class="form-control" 
@@ -22,7 +22,7 @@
                                     #fName="ngModel">
                                     <span class="help-block" *ngIf="fName.invalid && fName.touched">First Name is mandatory!</span>
                                 </div>
-                                <div class="form-group col-lg-5 lNSection">
+                                <div class="form-group col-sm-5 lNSection">
                                     <label for="lastName">Last Name *</label>
                                     <input type="text" 
                                     class="form-control" 
@@ -35,8 +35,8 @@
                                     <span class="help-block" *ngIf="lName.invalid && lName.touched">Last Name is mandatory!</span>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group col-lg-5 emailSection">
+                            <div class="col-sm-12 contactSection">
+                                <div class="form-group col-sm-5 emailSection">
                                     <label for=email>Email *</label>
                                     <input type="email" 
                                     class="form-control" 
@@ -48,7 +48,7 @@
                                     #email="ngModel">
                                     <span class="help-block" *ngIf="email.invalid && email.touched">Please enter a valid email!</span>
                                 </div>
-                                <div class="form-group col-lg-5 phoneSection">
+                                <div class="form-group col-sm-5 phoneSection">
                                     <label for="lastName">Phone Number *</label>
                                     <input type="tel" 
                                     class="form-control" 
@@ -59,11 +59,11 @@
                                     ngModel
                                     required
                                     #phone="ngModel">
-                                    <span class="help-block" *ngIf="phone.invalid && phone.touched">Please enter a valid phone number!</span>
+                                    <span class="help-block" *ngIf="phone.invalid && phone.touched">Please enter a valid number!</span>
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <div class="form-group col-lg-10 messageSection">
+                                <div class="form-group col-sm-10 messageSection">
                                     <label for=email>Message *</label>
                                     <textarea class="form-control" 
                                     id="messageArea" 

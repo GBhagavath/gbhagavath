@@ -328,6 +328,10 @@ textarea.ng-invalid.ng-touched {
     display: none;
 }
 
+.nameSection, .contactSection {
+    display: flex;
+  }
+
 @keyframes revealer {
     
     0%, 50% {

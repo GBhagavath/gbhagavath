@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
@@ -12,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found-component
 import { FragmentPolyfillModule } from './fragment-polyfill.module';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectService } from './projects/projects.service';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,12 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     FragmentPolyfillModule.forRoot({
 			smooth: true
 		})
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
